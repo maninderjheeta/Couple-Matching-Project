@@ -1,0 +1,513 @@
+2017-02-03 17:39:41,238 [INFO] from application in ForkJoinPool-1-worker-0 - Creating Pool for datasource 'default'
+2017-02-03 17:39:41,670 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-0 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 17:39:41,692 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-0 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 17:39:42,605 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in ForkJoinPool-1-worker-0 - Bean [models.Categories] has no unique id set
+2017-02-03 17:39:43,668 [ERROR] from application in netty-event-loop-6 - 
+
+! @730n7d30d - Internal server error, for (GET) [/] ->
+ 
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$play$api$db$evolutions$ApplicationEvolutions$$runEvolutions$1.apply$mcV$sp(ApplicationEvolutions.scala:77)
+	at play.api.db.evolutions.ApplicationEvolutions.withLock(ApplicationEvolutions.scala:99)
+	at play.api.db.evolutions.ApplicationEvolutions.play$api$db$evolutions$ApplicationEvolutions$$runEvolutions(ApplicationEvolutions.scala:49)
+	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$start$1.apply(ApplicationEvolutions.scala:42)
+	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$start$1.apply(ApplicationEvolutions.scala:42)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at play.api.db.evolutions.ApplicationEvolutions.start(ApplicationEvolutions.scala:42)
+	at play.api.db.evolutions.ApplicationEvolutions.<init>(ApplicationEvolutions.scala:150)
+	at play.api.db.evolutions.ApplicationEvolutionsProvider.get$lzycompute(EvolutionsModule.scala:53)
+	at play.api.db.evolutions.ApplicationEvolutionsProvider.get(EvolutionsModule.scala:53)
+	at play.api.db.evolutions.ApplicationEvolutionsProvider.get(EvolutionsModule.scala:44)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
+	at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+	at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:205)
+	at com.google.inject.internal.InternalInjectorCreator$1.call(InternalInjectorCreator.java:199)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+	at com.google.inject.internal.InternalInjectorCreator.loadEagerSingletons(InternalInjectorCreator.java:199)
+	at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:180)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:96)
+	at com.google.inject.Guice.createInjector(Guice.java:84)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
+	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:168)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:164)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:164)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:131)
+	at scala.Option.map(Option.scala:146)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:131)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:129)
+	at scala.util.Success.flatMap(Try.scala:231)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:129)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2017-02-03 17:39:54,394 [INFO] from application in ForkJoinPool-1-worker-0 - Shutting down connection pool.
+2017-02-03 17:39:54,635 [INFO] from application in ForkJoinPool-1-worker-0 - Creating Pool for datasource 'default'
+2017-02-03 17:39:54,641 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-0 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 17:39:54,648 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-0 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 17:39:54,725 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in ForkJoinPool-1-worker-0 - Bean [models.Categories] has no unique id set
+2017-02-03 17:39:55,457 [INFO] from play.api.Play in ForkJoinPool-1-worker-0 - Application started (Dev)
+2017-02-03 17:39:55,689 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+
+! @730n7dkoi - Internal server error, for (GET) [/accounts] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
+	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:255)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.NullPointerException: null
+	at views.html.list_Scope0$list.apply(list.template.scala:105)
+	at views.html.list_Scope0$list.render(list.template.scala:128)
+	at views.html.list.render(list.template.scala)
+	at controllers.HomeController.list(HomeController.java:101)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(Routes.scala:155)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$2$$anonfun$apply$2.apply(Routes.scala:155)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:494)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+2017-02-03 17:48:32,557 [ERROR] from application in application-akka.actor.default-dispatcher-33 - 
+
+! @730n8h5e6 - Internal server error, for (GET) [/accounts/details] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Error loading on models.AccountDetails.transactiondate]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
+	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:255)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: javax.persistence.PersistenceException: Error loading on models.AccountDetails.transactiondate
+	at io.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:85)
+	at io.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:608)
+	at io.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:273)
+	at io.ebeaninternal.server.query.CQuery.readNextBean(CQuery.java:440)
+	at io.ebeaninternal.server.query.CQuery.hasNext(CQuery.java:525)
+	at io.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:557)
+	at io.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:329)
+	at io.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:105)
+	at io.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:341)
+	at io.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1413)
+	at io.ebeaninternal.server.core.DefaultBeanLoader.executeQuery(DefaultBeanLoader.java:231)
+	at io.ebeaninternal.server.core.DefaultBeanLoader.loadMany(DefaultBeanLoader.java:88)
+	at io.ebeaninternal.server.core.DefaultServer.loadMany(DefaultServer.java:478)
+	at io.ebeaninternal.server.loadcontext.DLoadManyContext$LoadBuffer.loadMany(DLoadManyContext.java:220)
+	at io.ebean.common.AbstractBeanCollection.lazyLoadCollection(AbstractBeanCollection.java:103)
+	at io.ebean.common.BeanList.init(BeanList.java:132)
+	at io.ebean.common.BeanList.iterator(BeanList.java:309)
+	at scala.collection.convert.Wrappers$JListWrapper.iterator(Wrappers.scala:88)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at views.html.edit_Scope0$edit.apply(edit.template.scala:92)
+	at views.html.edit_Scope0$edit.render(edit.template.scala:122)
+	at views.html.edit.render(edit.template.scala)
+	at controllers.HomeController.edit(HomeController.java:117)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:161)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:161)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:494)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00.000000' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:937)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:130)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:5946)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:5616)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getTimestamp(HikariProxyResultSet.java)
+	at io.ebeaninternal.server.type.RsetDataReader.getTimestamp(RsetDataReader.java:162)
+	at io.ebeaninternal.server.type.ScalarTypeUtilDate$TimestampType.read(ScalarTypeUtilDate.java:39)
+	at io.ebeaninternal.server.type.ScalarTypeUtilDate$TimestampType.read(ScalarTypeUtilDate.java:16)
+	at io.ebeaninternal.server.deploy.BeanProperty.read(BeanProperty.java:620)
+	at io.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:74)
+	... 65 common frames omitted
+2017-02-03 17:49:24,578 [DEBUG] from application in application-akka.actor.default-dispatcher-40 - ---->[Ljava.lang.String;@15d8721
+2017-02-03 17:49:24,578 [DEBUG] from application in application-akka.actor.default-dispatcher-40 - ---->[Ljava.lang.String;@1056fb6
+2017-02-03 17:49:24,580 [INFO] from application in application-akka.actor.default-dispatcher-40 - ids Selected are : 624
+2017-02-03 17:49:27,193 [INFO] from application in application-akka.actor.default-dispatcher-40 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__17_49_24>>
+2017-02-03 17:50:04,629 [DEBUG] from application in application-akka.actor.default-dispatcher-41 - ---->[Ljava.lang.String;@3faae8
+2017-02-03 17:50:04,629 [DEBUG] from application in application-akka.actor.default-dispatcher-41 - ---->[Ljava.lang.String;@34f7
+2017-02-03 17:50:04,629 [INFO] from application in application-akka.actor.default-dispatcher-41 - ids Selected are : 624
+2017-02-03 17:50:05,067 [INFO] from application in application-akka.actor.default-dispatcher-41 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__17_50_04>>
+2017-02-03 17:50:23,846 [DEBUG] from application in application-akka.actor.default-dispatcher-47 - ---->[Ljava.lang.String;@1cd4bea
+2017-02-03 17:50:23,846 [DEBUG] from application in application-akka.actor.default-dispatcher-47 - ---->[Ljava.lang.String;@1286b11
+2017-02-03 17:50:23,846 [INFO] from application in application-akka.actor.default-dispatcher-47 - ids Selected are : 624
+2017-02-03 17:50:24,202 [INFO] from application in application-akka.actor.default-dispatcher-47 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__17_50_23>>
+2017-02-03 17:53:03,166 [INFO] from application in application-akka.actor.default-dispatcher-37 - Shutting down connection pool.
+2017-02-03 17:53:03,506 [INFO] from application in application-akka.actor.default-dispatcher-37 - Creating Pool for datasource 'default'
+2017-02-03 17:53:03,517 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-37 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 17:53:03,527 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-37 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 17:53:03,609 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in application-akka.actor.default-dispatcher-37 - Bean [models.Categories] has no unique id set
+2017-02-03 17:53:03,784 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-37 - Application started (Dev)
+2017-02-03 17:53:45,041 [ERROR] from application in netty-event-loop-5 - 
+
+! @730n98pkl - Internal server error, for (GET) [/accounts] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[too many arguments for method edit: ()play.api.mvc.Call]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:339)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:44)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:40)
+	at play.runsupport.Reloader.reload(Reloader.scala:337)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:123)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-02-03 17:54:37,673 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-02-03 17:54:37,961 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-02-03 17:54:37,970 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-3 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 17:54:37,976 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 17:54:38,042 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in application-akka.actor.default-dispatcher-3 - Bean [models.Categories] has no unique id set
+2017-02-03 17:54:38,182 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-02-03 18:07:19,515 [INFO] from application in application-akka.actor.default-dispatcher-14 - Shutting down connection pool.
+2017-02-03 18:07:19,853 [INFO] from application in application-akka.actor.default-dispatcher-14 - Creating Pool for datasource 'default'
+2017-02-03 18:07:19,860 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-14 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 18:07:19,866 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-14 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 18:07:19,926 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in application-akka.actor.default-dispatcher-14 - Bean [models.Categories] has no unique id set
+2017-02-03 18:07:20,109 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-14 - Application started (Dev)
+2017-02-03 18:08:10,110 [ERROR] from application in application-akka.actor.default-dispatcher-15 - 
+
+! @730nb65cj - Internal server error, for (GET) [/accounts/details/89593] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Error loading on models.AccountDetails.transactiondate]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:304)
+	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:289)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:255)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: javax.persistence.PersistenceException: Error loading on models.AccountDetails.transactiondate
+	at io.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:85)
+	at io.ebeaninternal.server.deploy.BeanProperty.load(BeanProperty.java:608)
+	at io.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:273)
+	at io.ebeaninternal.server.query.CQuery.readNextBean(CQuery.java:440)
+	at io.ebeaninternal.server.query.CQuery.hasNext(CQuery.java:525)
+	at io.ebeaninternal.server.query.CQuery.readCollection(CQuery.java:557)
+	at io.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:329)
+	at io.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:105)
+	at io.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:341)
+	at io.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1413)
+	at io.ebeaninternal.server.core.DefaultBeanLoader.executeQuery(DefaultBeanLoader.java:231)
+	at io.ebeaninternal.server.core.DefaultBeanLoader.loadMany(DefaultBeanLoader.java:88)
+	at io.ebeaninternal.server.core.DefaultServer.loadMany(DefaultServer.java:478)
+	at io.ebeaninternal.server.loadcontext.DLoadManyContext$LoadBuffer.loadMany(DLoadManyContext.java:220)
+	at io.ebean.common.AbstractBeanCollection.lazyLoadCollection(AbstractBeanCollection.java:103)
+	at io.ebean.common.BeanList.init(BeanList.java:132)
+	at io.ebean.common.BeanList.iterator(BeanList.java:309)
+	at scala.collection.convert.Wrappers$JListWrapper.iterator(Wrappers.scala:88)
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at views.html.edit_Scope0$edit.apply(edit.template.scala:92)
+	at views.html.edit_Scope0$edit.render(edit.template.scala:122)
+	at views.html.edit.render(edit.template.scala)
+	at controllers.HomeController.edit(HomeController.java:117)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:161)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:161)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:494)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: java.sql.SQLException: Value '0000-00-00 00:00:00.000000' can not be represented as java.sql.Timestamp
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:963)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ResultSetRow.getTimestampFast(ResultSetRow.java:937)
+	at com.mysql.jdbc.ByteArrayRow.getTimestampFast(ByteArrayRow.java:130)
+	at com.mysql.jdbc.ResultSetImpl.getTimestampInternal(ResultSetImpl.java:5946)
+	at com.mysql.jdbc.ResultSetImpl.getTimestamp(ResultSetImpl.java:5616)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getTimestamp(HikariProxyResultSet.java)
+	at io.ebeaninternal.server.type.RsetDataReader.getTimestamp(RsetDataReader.java:162)
+	at io.ebeaninternal.server.type.ScalarTypeUtilDate$TimestampType.read(ScalarTypeUtilDate.java:39)
+	at io.ebeaninternal.server.type.ScalarTypeUtilDate$TimestampType.read(ScalarTypeUtilDate.java:16)
+	at io.ebeaninternal.server.deploy.BeanProperty.read(BeanProperty.java:620)
+	at io.ebeaninternal.server.query.SqlBeanLoad.load(SqlBeanLoad.java:74)
+	... 65 common frames omitted
+2017-02-03 18:14:14,679 [INFO] from application in application-akka.actor.default-dispatcher-23 - Shutting down connection pool.
+2017-02-03 18:14:14,963 [INFO] from application in application-akka.actor.default-dispatcher-23 - Creating Pool for datasource 'default'
+2017-02-03 18:14:14,972 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-23 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 18:14:14,978 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-23 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 18:14:15,045 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in application-akka.actor.default-dispatcher-23 - Bean [models.Categories] has no unique id set
+2017-02-03 18:14:15,224 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-23 - Application started (Dev)
+2017-02-03 18:15:56,541 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - ---->[Ljava.lang.String;@138e2f3
+2017-02-03 18:15:56,541 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - ---->[Ljava.lang.String;@1076ccc
+2017-02-03 18:15:56,543 [INFO] from application in application-akka.actor.default-dispatcher-10 - ids Selected are : 89593
+2017-02-03 18:15:57,057 [INFO] from application in application-akka.actor.default-dispatcher-10 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_15_56>>
+2017-02-03 18:16:20,910 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - ---->[Ljava.lang.String;@1e07c9d
+2017-02-03 18:16:20,910 [DEBUG] from application in application-akka.actor.default-dispatcher-10 - ---->[Ljava.lang.String;@fd1e83
+2017-02-03 18:16:20,910 [INFO] from application in application-akka.actor.default-dispatcher-10 - ids Selected are : 624
+2017-02-03 18:16:21,245 [INFO] from application in application-akka.actor.default-dispatcher-10 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_16_20>>
+2017-02-03 18:16:33,596 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - ---->[Ljava.lang.String;@5c1b7c
+2017-02-03 18:16:33,597 [DEBUG] from application in application-akka.actor.default-dispatcher-4 - ---->[Ljava.lang.String;@1a0b90c
+2017-02-03 18:16:33,597 [INFO] from application in application-akka.actor.default-dispatcher-4 - ids Selected are : 624;89593
+2017-02-03 18:16:34,211 [INFO] from application in application-akka.actor.default-dispatcher-4 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_16_33>>
+2017-02-03 18:20:31,336 [DEBUG] from application in application-akka.actor.default-dispatcher-34 - ---->[Ljava.lang.String;@12fe6d
+2017-02-03 18:20:31,336 [DEBUG] from application in application-akka.actor.default-dispatcher-34 - ---->[Ljava.lang.String;@2d7237
+2017-02-03 18:20:31,336 [INFO] from application in application-akka.actor.default-dispatcher-34 - ids Selected are : 624;89593
+2017-02-03 18:20:31,866 [INFO] from application in application-akka.actor.default-dispatcher-34 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_20_31>>
+2017-02-03 18:24:14,140 [DEBUG] from application in application-akka.actor.default-dispatcher-41 - ---->[Ljava.lang.String;@acdebf
+2017-02-03 18:24:14,140 [DEBUG] from application in application-akka.actor.default-dispatcher-41 - ---->[Ljava.lang.String;@9353f2
+2017-02-03 18:24:14,140 [INFO] from application in application-akka.actor.default-dispatcher-41 - ids Selected are : 624;89593
+2017-02-03 18:24:14,792 [INFO] from application in application-akka.actor.default-dispatcher-41 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_24_14>>
+2017-02-03 18:24:45,492 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@1dc9a9f
+2017-02-03 18:24:45,492 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@1e3017c
+2017-02-03 18:24:45,492 [INFO] from application in application-akka.actor.default-dispatcher-50 - ids Selected are : 624;89593
+2017-02-03 18:24:46,634 [INFO] from application in application-akka.actor.default-dispatcher-50 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__18_24_45>>
+2017-02-03 20:22:10,092 [ERROR] from application in netty-event-loop-7 - 
+
+! @730o2lgoh - Internal server error, for (GET) [/accounts] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[')' expected]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:339)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:44)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:40)
+	at play.runsupport.Reloader.reload(Reloader.scala:337)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:123)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-02-03 20:24:13,607 [INFO] from application in application-akka.actor.default-dispatcher-42 - Shutting down connection pool.
+2017-02-03 20:24:14,040 [INFO] from application in application-akka.actor.default-dispatcher-42 - Creating Pool for datasource 'default'
+2017-02-03 20:24:14,048 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-42 - datasource [default] bound to JNDI as DefaultDS
+2017-02-03 20:24:14,053 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-42 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-03 20:24:14,117 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in application-akka.actor.default-dispatcher-42 - Bean [models.Categories] has no unique id set
+2017-02-03 20:24:14,594 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-42 - Application started (Dev)
+2017-02-03 20:24:22,087 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@1081bb2
+2017-02-03 20:24:22,087 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@15f5fc9
+2017-02-03 20:24:22,125 [INFO] from application in application-akka.actor.default-dispatcher-8 - ids Selected are : 624;89593
+2017-02-03 20:24:24,218 [INFO] from application in application-akka.actor.default-dispatcher-8 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__20_24_22>>
+2017-02-03 20:24:35,739 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - ---->[Ljava.lang.String;@ddbf0a
+2017-02-03 20:24:35,739 [DEBUG] from application in application-akka.actor.default-dispatcher-6 - ---->[Ljava.lang.String;@e23c09
+2017-02-03 20:24:35,739 [INFO] from application in application-akka.actor.default-dispatcher-6 - ids Selected are : 624;89593
+2017-02-03 20:24:36,076 [INFO] from application in application-akka.actor.default-dispatcher-6 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/General     03-02-2017__20_24_35>>
+2017-02-03 20:33:40,524 [DEBUG] from application in application-akka.actor.default-dispatcher-19 - ---->[Ljava.lang.String;@12686d9
+2017-02-03 20:33:40,525 [DEBUG] from application in application-akka.actor.default-dispatcher-19 - ---->[Ljava.lang.String;@1191325
+2017-02-03 20:33:40,525 [INFO] from application in application-akka.actor.default-dispatcher-19 - ids Selected are : 624;89593
+2017-02-03 20:33:40,641 [INFO] from application in application-akka.actor.default-dispatcher-19 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/General     03-02-2017__20_33_40>>
+2017-02-03 20:41:22,843 [DEBUG] from application in application-akka.actor.default-dispatcher-26 - ---->[Ljava.lang.String;@1c8156b
+2017-02-03 20:41:22,843 [DEBUG] from application in application-akka.actor.default-dispatcher-26 - ---->[Ljava.lang.String;@1f7898a
+2017-02-03 20:41:22,843 [INFO] from application in application-akka.actor.default-dispatcher-26 - ids Selected are : 624;89593
+2017-02-03 20:41:23,354 [INFO] from application in application-akka.actor.default-dispatcher-26 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__20_41_22>>
+2017-02-03 20:45:08,318 [DEBUG] from application in application-akka.actor.default-dispatcher-38 - ---->[Ljava.lang.String;@f4b54c
+2017-02-03 20:45:08,318 [DEBUG] from application in application-akka.actor.default-dispatcher-38 - ---->null
+2017-02-03 20:45:14,897 [DEBUG] from application in application-akka.actor.default-dispatcher-38 - ---->[Ljava.lang.String;@855b3c
+2017-02-03 20:45:14,897 [DEBUG] from application in application-akka.actor.default-dispatcher-38 - ---->[Ljava.lang.String;@ecb5b0
+2017-02-03 20:45:14,897 [INFO] from application in application-akka.actor.default-dispatcher-38 - ids Selected are : 624
+2017-02-03 20:45:15,194 [INFO] from application in application-akka.actor.default-dispatcher-38 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__20_45_14>>
+2017-02-03 20:56:59,116 [DEBUG] from application in application-akka.actor.default-dispatcher-44 - ---->[Ljava.lang.String;@9ce3a1
+2017-02-03 20:56:59,116 [DEBUG] from application in application-akka.actor.default-dispatcher-44 - ---->[Ljava.lang.String;@a37aea
+2017-02-03 20:56:59,116 [INFO] from application in application-akka.actor.default-dispatcher-44 - ids Selected are : 624
+2017-02-03 20:56:59,624 [INFO] from application in application-akka.actor.default-dispatcher-44 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__20_56_59>>
+2017-02-03 20:57:20,017 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@10e47d5
+2017-02-03 20:57:20,017 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@131c6ec
+2017-02-03 20:57:20,017 [INFO] from application in application-akka.actor.default-dispatcher-50 - ids Selected are : 624;89593
+2017-02-03 20:57:20,485 [INFO] from application in application-akka.actor.default-dispatcher-50 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     03-02-2017__20_57_20>>
+2017-02-03 20:57:50,454 [DEBUG] from application in application-akka.actor.default-dispatcher-51 - ---->[Ljava.lang.String;@1d8c727
+2017-02-03 20:57:50,454 [DEBUG] from application in application-akka.actor.default-dispatcher-51 - ---->[Ljava.lang.String;@175da03
+2017-02-03 20:57:50,455 [INFO] from application in application-akka.actor.default-dispatcher-51 - ids Selected are : 624;89593
+2017-02-03 20:57:50,574 [INFO] from application in application-akka.actor.default-dispatcher-51 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/General     03-02-2017__20_57_50>>
+2017-02-03 20:57:54,658 [DEBUG] from application in application-akka.actor.default-dispatcher-56 - ---->[Ljava.lang.String;@199aeab
+2017-02-03 20:57:54,659 [DEBUG] from application in application-akka.actor.default-dispatcher-56 - ---->[Ljava.lang.String;@1684697
+2017-02-03 20:57:54,659 [INFO] from application in application-akka.actor.default-dispatcher-56 - ids Selected are : 624
+2017-02-03 20:57:54,905 [INFO] from application in application-akka.actor.default-dispatcher-56 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/General     03-02-2017__20_57_54>>

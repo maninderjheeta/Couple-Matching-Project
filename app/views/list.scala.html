@@ -1,0 +1,62 @@
+@(acc : List[Account])
+
+@scripts = { 
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/plugins/datatables/dataTables.bootstrap.css")">  
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/dist/css/datatable/select.dataTables.min.css")">  
+	<script src="@routes.Assets.at("stylesheets/plugins/datatables/jquery.dataTables.min.js")" type="text/javascript"></script>
+	<script src="@routes.Assets.at("stylesheets/plugins/datatables/dataTables.bootstrap.min.js")" type="text/javascript"></script>
+	<script src="@routes.Assets.at("javascripts/datatables/page_list.js")"></script>   
+
+	<style>
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button2 {background-color: #008CBA;} /* Blue */
+		.button3 {background-color: #f44336;} /* Red */ 
+		.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+		.button5 {background-color: #555555;} /* Black */
+	</style>
+}
+
+@main(scripts) {
+	<form method="POST" action="/CustomActions">
+		<button class="button button2" type="submit" name="action" value="HTML Report" formtarget="_blank">HTML Report</button>
+		<button class="button button3" type="submit" name="action" value="PDF Report" formtarget="_blank">PDF Report</button>
+		<button class="button button4" type="submit" name="action" value="General Report" formtarget="_blank">Matching Report</button>
+
+
+		<br><br><br>
+		<table id="example" class="table table-bordered table-striped" cellspacing="0" width="100%">
+
+		   <thead>
+			  <tr>
+				 <th><input name="select_all" value="1" id="example-select-all" type="checkbox"></th>
+				 
+				 <th>Account Code</th>                                 
+						
+			  </tr>
+		   </thead>
+
+		   <tbody>                    
+					@for(x <- acc){
+						<tr>
+						
+							<td>@x.id</td>
+								  
+							<td><a href="@routes.HomeController.edit(x.id)">@x.id</a></td>
+						
+						</tr>
+					}
+				</tbody>
+		</table>
+	</form>
+}
