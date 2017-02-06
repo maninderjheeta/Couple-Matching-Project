@@ -1,0 +1,43 @@
+2017-02-04 20:44:21,096 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-02-04 20:44:21,993 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-02-04 20:44:22,019 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://127.0.0.1:3306/my_project?characterEncoding=UTF-8
+2017-02-04 20:44:23,646 [WARN] from io.ebeaninternal.server.deploy.BeanDescriptorManager in ForkJoinPool-1-worker-1 - Bean [models.Categories] has no unique id set
+2017-02-04 20:44:25,484 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-02-04 20:45:53,560 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@12df170
+2017-02-04 20:45:53,560 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@bd91dc
+2017-02-04 20:45:53,562 [INFO] from application in application-akka.actor.default-dispatcher-8 - ids Selected are : 23752
+2017-02-04 20:46:06,475 [INFO] from application in application-akka.actor.default-dispatcher-8 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     04-02-2017__20_45_53>>
+2017-02-04 20:46:16,525 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@1010563
+2017-02-04 20:46:16,526 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@ae8a03
+2017-02-04 20:46:16,527 [INFO] from application in application-akka.actor.default-dispatcher-8 - ids Selected are : 5349
+2017-02-04 20:46:17,017 [INFO] from application in application-akka.actor.default-dispatcher-8 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     04-02-2017__20_46_16>>
+2017-02-04 20:46:27,714 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@d38233
+2017-02-04 20:46:27,715 [DEBUG] from application in application-akka.actor.default-dispatcher-8 - ---->[Ljava.lang.String;@5203ac
+2017-02-04 20:46:27,715 [INFO] from application in application-akka.actor.default-dispatcher-8 - ids Selected are : 89593
+2017-02-04 20:46:28,151 [INFO] from application in application-akka.actor.default-dispatcher-8 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     04-02-2017__20_46_27>>
+2017-02-04 20:46:37,801 [DEBUG] from application in application-akka.actor.default-dispatcher-19 - ---->[Ljava.lang.String;@19d96b
+2017-02-04 20:46:37,801 [DEBUG] from application in application-akka.actor.default-dispatcher-19 - ---->[Ljava.lang.String;@28c20e
+2017-02-04 20:46:37,801 [INFO] from application in application-akka.actor.default-dispatcher-19 - ids Selected are : 85770;89593
+2017-02-04 20:46:38,899 [INFO] from application in application-akka.actor.default-dispatcher-19 - Generate Report pdf << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/General     04-02-2017__20_46_37>>
+2017-02-05 04:59:21,622 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s664ms211탎36ns).
+2017-02-05 08:14:40,237 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m54s374ms230탎335ns).
+2017-02-05 20:06:25,026 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h51m50s212ms928탎377ns).
+2017-02-05 20:07:10,992 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-1 housekeeper - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s336ms535탎233ns).
+2017-02-05 22:59:13,464 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->[Ljava.lang.String;@1798208
+2017-02-05 22:59:13,465 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->null
+2017-02-05 22:59:17,169 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->[Ljava.lang.String;@36b172
+2017-02-05 22:59:17,169 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->null
+2017-02-05 22:59:23,225 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->[Ljava.lang.String;@1bc5178
+2017-02-05 22:59:23,225 [DEBUG] from application in application-akka.actor.default-dispatcher-49 - ---->null
+2017-02-05 23:01:43,793 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@6b5a61
+2017-02-05 23:01:43,793 [DEBUG] from application in application-akka.actor.default-dispatcher-50 - ---->[Ljava.lang.String;@54db74
+2017-02-05 23:01:43,793 [INFO] from application in application-akka.actor.default-dispatcher-50 - ids Selected are : 624;5349;23752
+2017-02-05 23:01:54,410 [DEBUG] from application in application-akka.actor.default-dispatcher-48 - ---->[Ljava.lang.String;@c63f2
+2017-02-05 23:01:54,410 [DEBUG] from application in application-akka.actor.default-dispatcher-48 - ---->[Ljava.lang.String;@17eb188
+2017-02-05 23:01:54,410 [INFO] from application in application-akka.actor.default-dispatcher-48 - ids Selected are : 624;5349
+2017-02-05 23:02:16,521 [INFO] from application in application-akka.actor.default-dispatcher-48 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     05-02-2017__23_01_54>>
+2017-02-05 23:02:17,036 [INFO] from application in application-akka.actor.default-dispatcher-50 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     05-02-2017__23_01_43>>
+2017-02-05 23:02:53,555 [DEBUG] from application in application-akka.actor.default-dispatcher-62 - ---->[Ljava.lang.String;@5c12bb
+2017-02-05 23:02:53,555 [DEBUG] from application in application-akka.actor.default-dispatcher-62 - ---->[Ljava.lang.String;@638568
+2017-02-05 23:02:53,555 [INFO] from application in application-akka.actor.default-dispatcher-62 - ids Selected are : 624
+2017-02-05 23:02:54,319 [INFO] from application in application-akka.actor.default-dispatcher-62 - Generate Report html << Maninder/ >> Successfuly in the Folder <<C:/temp/exports/ManinderReport     05-02-2017__23_02_53>>

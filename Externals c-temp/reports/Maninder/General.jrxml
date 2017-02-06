@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ManinderReport" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bffcef74-a52c-4eed-bdbc-8a044b19c8f0">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="param_ids" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{param_ids}.toString().substring(0, $P{param_ids}.indexOf( ";" ) )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="paramm" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{param_ids}.toString().substring( $P{param_ids}.indexOf( ";" ) + 1 )]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  'condition = difference more or less than 10000' as conditon,account_A.auth_id as acc1,format(abs(account_A.all_amount_account_a),2) as all_amount_a, account_B.auth_id as acc_2,format(abs(account_B.all_amount_account_b),2) as all_mount_b,
+case when format(abs(account_A.all_amount_account_a),2) - format(abs(account_B.all_amount_account_B),2) > 10000 then 'Match' else 'not match' end as Matching
+from account
+left join
+(
+select auth_id,sum(amount) as all_amount_account_a
+from account_details
+where account_details.auth_id = $P{param}
+group by auth_id
+) account_A on  1=1
+
+left join
+(
+select auth_id,sum(amount) as all_amount_account_B
+from account_details
+where account_details.auth_id = $P{paramm}
+group by auth_id
+) account_B on 2=2
+
+
+
+order by 1 asc
+limit 1]]>
+	</queryString>
+	<field name="conditon" class="java.lang.String"/>
+	<field name="acc1" class="java.lang.Long"/>
+	<field name="all_amount_a" class="java.lang.String"/>
+	<field name="acc_2" class="java.lang.Long"/>
+	<field name="all_mount_b" class="java.lang.String"/>
+	<field name="Matching" class="java.lang.String"/>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+	</group>
+	<title>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4a366d79-4fb7-4e7f-9622-7c25e3a093b1" style="SubTitle" x="349" y="49" width="322" height="29"/>
+				<textElement textAlignment="Right">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rochester Institute of Technology]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="c60e9635-14dc-4fbc-b632-d9b6d9da3f8b" mode="Opaque" x="-18" y="0" width="693" height="48" forecolor="#006699" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="01984a89-b00c-41ea-8a27-680833f48ff0" style="Title" x="102" y="0" width="567" height="46"/>
+					<textElement textAlignment="Right">
+						<font size="38" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Maninder Project]]></text>
+				</staticText>
+			</frame>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="80f10d84-c208-44a5-9cc5-c2587e94d71f" x="675" y="0" width="127" height="78"/>
+				<imageExpression><![CDATA["C:\\temp\\reports\\Maninder\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d4ecf57e-b71b-4c43-9364-31d63aed51b2" x="26" y="24" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[acc1]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="04778a78-bb6e-4a8c-bfeb-2fae997e0485" x="126" y="24" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{acc1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="242668f0-4028-4629-b0fa-c0b1cd5d022a" x="309" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[acc_2]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b7a39d8c-d2e0-4232-b3b2-38ad33b2e959" x="409" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{acc_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d8412d82-86b1-48da-b7e9-52c450e87bde" x="31" y="50" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[all_amount_a]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f7465aff-0be7-4163-922f-504ec6e7fb8f" x="131" y="50" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{all_amount_a}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="40a348cb-1a08-4161-882a-9e499aaacf1e" x="315" y="56" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[all_mount_b]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0d5558f4-48b5-4de3-ac11-d58b4b6b5943" x="415" y="56" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{all_mount_b}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="76b681f1-65c1-4d4d-aef5-3133ae6fec46" x="594" y="37" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Matching]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="602d35f5-df09-4dc9-8bb0-27146368b9a5" x="694" y="37" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Matching}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="16" splitType="Stretch">
+			<frame>
+				<reportElement uuid="099782d9-b8e6-485e-8a54-4978d06c4c28" mode="Opaque" x="2" y="0" width="800" height="16" forecolor="#D0B48E" backcolor="#006699"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="6bfcef4d-6b78-49da-ba87-ee56f366b4f9" style="Column header" x="753" y="0" width="40" height="16" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="10d05d38-54b5-4092-b139-fd8e530ad5be" style="Column header" x="673" y="0" width="80" height="16" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="1b45ef7d-f9b7-4af5-b8fd-455a4fa573b3" style="Column header" x="2" y="0" width="197" height="16" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

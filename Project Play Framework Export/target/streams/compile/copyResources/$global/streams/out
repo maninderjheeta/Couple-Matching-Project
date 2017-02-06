@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\application.conf,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\evolutions,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\logback.xml,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\messages,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\messages)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\routes,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\evolutions\default,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Waheguru\Desktop\Project Play Framework Export\conf\evolutions\default\1.sql,C:\Users\Waheguru\Desktop\Project Play Framework Export\target\scala-2.11\classes\evolutions\default\1.sql)[0m
